@@ -1,0 +1,33 @@
+ESCLARECIMENTO DE LICENCIAMENTO COMERCIAL E SUPORTE CORPORATIVO — Munin App
+Versão 2026.11.6.0, 6 de novembro de 2026
+
+Autor e Desenvolvedor: Fernando Nillsson Cidade
+E-mail Institucional: linceu_lighthouse@outlook.com
+Repositório Oficial: https://github.com/fernandoncidade/Munin_App_cpp
+
+--------------------------------------------------------------------------------
+
+1. CÓDIGO-FONTE ABERTO E TRANSPARÊNCIA:
+O código-fonte integral deste projeto é disponibilizado publicamente no GitHub sob a Licença GNU Affero General Public License v3 (AGPLv3). Qualquer pessoa ou organização possui total liberdade para inspecionar, auditar, compilar, modificar e criar trabalhos derivados a partir do código-fonte, nos termos e condições da GNU AGPLv3.
+
+2. EDIÇÃO OFICIAL DA MICROSOFT STORE:
+Para conveniência de implantação empresarial, instalação simplificada sem privilégios de compilação e integridade garantida por assinatura digital, o autor disponibiliza oficialmente o Munin App como uma aplicação pronta para uso na Microsoft Store:
+https://apps.microsoft.com/detail/9PP4GVHR5THC
+
+3. POLÍTICA DE SUPORTE TÉCNICO E MANUTENÇÃO:
+O desenvolvimento e a manutenção deste projeto são realizados pelo autor como iniciativa técnica e educacional em C++20 e Qt 6. Por essa razão:
+a) O suporte técnico fornecido pelo autor (pessoa física) é realizado EXCLUSIVAMENTE por correio eletrônico (e-mail: linceu_lighthouse@outlook.com);
+b) O atendimento ocorre sob o regime de melhores esforços (best-effort), em conformidade com a disponibilidade voluntária do autor;
+c) Não há prestação de suporte técnico por telefone, atendimento 24/7 nem realização de acesso remoto a servidores ou estações de trabalho de usuários ou clientes;
+d) Questões técnicas, correções de bugs e dúvidas de implementação também podem ser submetidas publicamente através das abas Issues e Discussions no repositório do GitHub.
+
+4. HOMOLOGAÇÕES CORPORATIVAS E LICENCIAMENTO COMERCIAL SOB MEDIDA:
+Para organizações corporativas que necessitem de:
+- Avaliação de conformidade e governança de logs para ambientes Windows Server / DevOps / SRE;
+- Pacotes de suporte dedicados ou acordos corporativos especiais;
+- Exceções comerciais ou isenção de obrigações copyleft da licença AGPLv3 para distribuições fechadas;
+
+Favor entrar em contato diretamente através do e-mail:
+linceu_lighthouse@outlook.com
+
+Brasil, Paraná, São José dos Pinhais, 6 de novembro de 2026.

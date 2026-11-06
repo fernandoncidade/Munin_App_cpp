@@ -1,0 +1,68 @@
+Project: MUNIN APP — MASSIVE LOG VIEWER
+Version: 2026.11.6.0
+Authors: Fernando Nillsson Cidade
+
+Description: High-Performance Local Platform for Ultra-Fast Viewing, SIMD Vectorized Indexing, and Real-Time Massive Log Analysis for Windows
+"Open, index, and search through multi-gigabyte log files instantaneously — without freezing, without exhausting RAM, and with absolute privacy."
+
+Munin App is a high-performance Windows application developed in modern C++20 and Qt 6, engineered to definitively overcome one of the most critical operational bottlenecks in modern computing: the sluggishness and crashes experienced by traditional text editors when attempting to open massive log files (ranging from hundreds of megabytes to tens of gigabytes). Rather than loading entire files into memory buffers—which inflates RAM consumption and locks the user interface—Munin App leverages three low-level software engineering pillars:
+
+1. Win32 Virtual Memory-Mapped Files (Memory-Mapped Files): Instantaneous file opening using native Windows kernel APIs (CreateFileMappingW and MapViewOfFile). The operating system manages memory pages strictly on-demand directly from physical storage (NVMe/SSD/HDD), enabling 1 GB, 10 GB, or larger files to open in a split second while maintaining minimal RAM usage (consistently below 60 MB).
+2. SIMD Vectorized Indexing and Multi-Core Parallel Search: Ultra-fast hardware scanning engine powered by AVX2 (256-bit) and SSE4.2 (128-bit) SIMD vector instructions capable of identifying line breaks ('\n') at speeds exceeding 3 GB/s, coupled with a thread-partitioned search engine distributed across all logical CPU cores with PCRE2 regular expression JIT acceleration.
+3. Real-Time Monitoring (Live Tail) and Structured Analysis: Real-time tracking of concurrent file writes using asynchronous native Win32 ReadDirectoryChangesW calls without expensive polling disk loops, complemented by a Time-Slice Scanner volume histogram to detect log bursts and a hierarchical JSON tree inspector for structured log payloads.
+
+Absolute Commitment to Privacy (Local-First):
+Your operational records never leave your computer. Munin App operates 100% offline, without network dependencies, without cloud infrastructure, without telemetry collection, without mandatory user registration, and without remote language models or external AI. All indexing and rendering intelligence executes exclusively on your local machine, ensuring strict compliance with GDPR and Brazilian LGPD regulations.
+
+
+The 6 Operating Modes of Munin App
+
+* Virtual Viewer with Interactive Minimap Mode: Fluid 60 FPS scrolling through millions of log lines driven by an in-memory virtualized table model coupled with an interactive graphical Minimap featuring heat-density rendering and instant navigation.
+* Multi-Core Parallel Search and Dynamic Filtering Mode: Locate plain text terms or complex regular expressions (Regex JIT) instantaneously. The Line Filter mode hides non-matching records, displaying only matching rows in seamless continuity.
+* Real-Time Monitoring Mode (Live Tail): Monitor the continuous arrival of new log entries from production servers and running applications with intelligent auto-scroll that pauses automatically upon manual user interaction.
+* Temporal Histogram Mode (Time-Slice Scanner): Automatic parsing of ISO-8601 timestamps and graphical display of event volume density over time, enabling pinpoint identification of error spikes and traffic surges.
+* Line and Structured JSON Inspector Mode: Retractable analytical sidebar that detects JSON payloads within log lines, rendering them with readable indentation and an interactive hierarchical property tree with quick-copy capabilities.
+* Load Generator and Benchmark Mode: Integrated utility for local generation of standardized synthetic test files (100 MB, 500 MB, and 1 GB) for hardware stress testing, performance validation, and throughput benchmarking.
+
+
+Key Use Cases and Target Audiences
+
+- Site Reliability and DevOps Engineers (SRE / DevOps): Troubleshoot critical outages across heavy container dumps, Kubernetes cluster logs, and web server records (Nginx, IIS, Apache) without slow cloud upload workflows.
+- Network and System Administrators (SysAdmins): Inspect massive Windows audit logs, enterprise firewall captures, and system event journals with sub-millisecond initial display.
+- Software Developers and Engineers: Investigate voluminous compiler logs, verbose debug traces, and long-running execution logs that crash VS Code or Notepad++.
+- Security and Incident Response Analysts (SecOps / Blue Team / Forensics): Perform rapid triage and indicator of compromise (IoC) searches across historical logs while preserving strict read-only file integrity.
+- Quality Assurance and Test Engineers (QA): Follow automated test suites and stress test output in real time using Live Tail.
+- Database Administrators (DBAs): Analyze transaction journals and slow-query execution plan dumps across relational and NoSQL database engines.
+
+
+How Munin App Works
+
+1. Protected Opening and Virtual Memory Mapping: The file is opened with shared read-only access (CreateFileW with GENERIC_READ and FILE_SHARE_READ | FILE_SHARE_WRITE) and mapped into the virtual address space of the process using CreateFileMappingW and MapViewOfFile.
+2. SIMD Vectorized Chunk Indexing: The file is processed in memory chunks by AVX2/SSE4.2 SIMD vector instructions scanning line breaks in parallel, generating a compact byte-offset table in record time.
+3. Virtual Rendering Without Massive String Allocation: The Qt 6 graphical interface uses a virtualized model (LogViewModel) that retrieves from mapped memory only the visible rows currently being rendered on screen, maintaining steady RAM usage regardless of file size (whether 50 MB or 50 GB).
+4. Asynchronous Non-Polling Monitoring: A dedicated background thread listens on the Windows directory notification port (ReadDirectoryChangesW). When new lines are written to the end of the file, Munin App recalculates size boundaries and refreshes the view immediately.
+5. Windows 11 Desktop Integration: The application integrates Windows DWM APIs for native Mica material support, modern frame styling, and seamless synchronization with the operating system Dark and Light themes.
+
+
+Analysis Tools and Available Capabilities
+
+- High-Performance Virtual Log Viewer: Fluid scrolling with dynamic font scaling and line-wrapping controls.
+- Interactive Lateral Minimap: Full document density view with instant viewport jumping.
+- Rapid Search and JIT Regular Expressions: Case-sensitivity options, whole-word matching, and PCRE2 regular expressions compiled with JIT.
+- Filtered Lines Mode: Isolation view displaying exclusively search-matching lines.
+- Live Tail Real-Time Monitoring: Real-time file following with automatic scroll management.
+- Time-Slice Volume Histogram: Temporal density chart for identifying anomaly windows and burst rates.
+- Line and Structured JSON Inspector: Syntax-highlighted formatter and property tree explorer.
+- System Performance Telemetry Panel: Real-time display of indexed line count, file size, and process physical RAM consumption.
+- Dynamic Native Bilingual Support: Instant runtime switching between English (United States) and Português (Brasil) without application restart.
+
+
+Best Practices and Performance Tips:
+1. Massive Files over Network Shares (UNC): Munin App supports local storage and UNC network shares (\\server\share). Over slower network links, page load latency is constrained by physical network throughput; local SSD/NVMe drives yield maximum speeds exceeding 3+ GB/s.
+2. Live Tail Operation: When Live Tail is active, the application automatically catches new writes without consuming idle CPU cycles thanks to the asynchronous Windows event queue.
+3. Regular Expressions: For complex regular expressions on multi-gigabyte files, use specific anchoring patterns where possible to accelerate the JIT matching engine.
+
+Support and Contact:
+Fernando Nillsson Cidade
+Email: linceu_lighthouse@outlook.com
+Repository: https://github.com/fernandoncidade

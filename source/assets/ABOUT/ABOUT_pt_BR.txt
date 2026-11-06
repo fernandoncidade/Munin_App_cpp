@@ -1,0 +1,68 @@
+Projeto: MUNIN APP — LEITOR DE LOGS MASSIVOS
+Versão: 2026.11.6.0
+Autores: Fernando Nillsson Cidade
+
+Descrição: Plataforma Local de Visualização Ultrarrápida, Indexação Vetorial SIMD e Análise em Tempo Real de Logs Massivos para Windows
+"Abra, indexe e pesquise por arquivos de log de múltiplos gigabytes instantaneamente — sem travar, sem esgotar a RAM e com total privacidade."
+
+O Munin App é uma aplicação de alta performance para Windows desenvolvida em C++20 moderno e Qt 6, concebida para superar definitivamente um dos maiores gargalos operacionais da computação moderna: o colapso e a lentidão dos editores de texto tradicionais ao tentar abrir arquivos de log massivos (de centenas de megabytes a dezenas de gigabytes). Em vez de carregar arquivos inteiros para a memória RAM inflando buffers e congelando a interface, o Munin App articula três pilares de engenharia de software de baixo nível:
+
+1. Mapeamento Virtual em Memória Win32 (Memory-Mapped Files): Abertura instantânea de arquivos gigantescos utilizando as APIs nativas do kernel do Windows (CreateFileMappingW e MapViewOfFile). O sistema operacional gerencia as páginas de memória sob demanda diretamente do armazenamento físico (NVMe/SSD/HD), permitindo abrir arquivos de 1 GB, 10 GB ou mais em fração de segundo com consumo mínimo de memória RAM (frequentemente inferior a 60 MB).
+2. Indexação Vetorial SIMD e Busca Paralela Multi-Core: Motor de varredura ultrarrápido em hardware com instruções vetoriais AVX2 (256-bit) e SSE4.2 (128-bit) capazes de identificar quebras de linha ('\n') a velocidades superiores a 3 GB/s, combinado a um mecanismo de busca particionado em threads distribuído por todos os núcleos lógicos da CPU com aceleração de expressões regulares (PCRE2 JIT).
+3. Monitoramento em Tempo Real (Live Tail) e Análise Estruturada: Acompanhamento de escritas concorrentes em tempo real via chamadas assíncronas nativas da API Win32 ReadDirectoryChangesW sem necessidade de polling contínuo no disco, acompanhado por um histograma temporal (Time-Slice Scanner) para identificação de surtos de registros e um inspetor hierárquico de logs em formato JSON estruturado.
+
+Compromisso Absoluto com a Privacidade (Local-First):
+Seus registros operacionais nunca saem do seu computador. O Munin App opera 100% offline, sem dependência de conexões de rede ou provedores em nuvem, sem coleta de telemetria, sem criação de contas e sem modelos remotos de linguagem ou inteligência artificial. Toda a inteligência de indexação e renderização é executada exclusivamente na sua máquina local, garantindo conformidade irrestrita com a LGPD e o GDPR.
+
+
+Os 6 Modos de Utilização do Munin App
+
+* Modo Visualizador Virtual com Minimap: Navegação a 60 FPS por milhões de linhas de log através de um modelo tabular virtualizado em memória acoplado a um Minimap visual interativo com mapa de calor e posicionamento instantâneo.
+* Modo Busca Paralela Multi-Core e Filtragem Dinâmica: Localize termos de texto simples ou padrões complexos de expressões regulares (Regex JIT) instantaneamente. O modo de filtragem de linhas oculta registros irrelevantes, exibindo apenas as ocorrências correspondentes em sequência contínua.
+* Modo Monitoramento em Tempo Real (Live Tail): Monitore a chegada de novos eventos de log de servidores e aplicações em produção com rolagem automática inteligente e pausa instantânea ao interagir com a lista.
+* Modo Histograma Temporal (Time-Slice Scanner): Parsing automático de timestamps no padrão ISO-8601 e exibição gráfica da densidade de eventos ao longo do tempo, permitindo identificar com precisão picos de erros e momentos de anomalia.
+* Modo Inspetor de Linhas e JSON Estruturado: Painel analítico retrátil que detecta payloads JSON em linhas de log, renderizando-os em formatação indentada legível e em uma árvore hierárquica de propriedades com cópia rápida de chaves e valores.
+* Modo Gerador de Carga e Benchmarks: Ferramenta integrada de síntese local de arquivos de teste padronizados (100 MB, 500 MB e 1 GB) para testes de estresse, validação de performance e aferição de taxas de transferência de hardware.
+
+
+Principais Casos de Uso e Públicos-Alvo
+
+- Engenheiros de Confiabilidade e DevOps (SRE / DevOps): Diagnosticar falhas críticas em logs pesados de contêineres, clusters Kubernetes e servidores web (Nginx, IIS, Apache) sem necessidade de pipelines pesados de upload.
+- Administradores de Redes e Sistemas (SysAdmins): Inspecionar logs extensos de auditoria do Windows, firewalls corporativos e registros de eventos com abertura em microssegundos.
+- Desenvolvedores e Engenheiros de Software: Investigar logs de compilação, traces de depuração verbosa e logs de execução contínua que esgotam a memória do VS Code ou Notepad++.
+- Analistas de Segurança e Resposta a Incidentes (SecOps / Blue Team / Forense): Realizar triagem rápida e busca de indicadores de comprometimento (IoCs) em grandes volumes de registros históricos mantendo os arquivos intactos em modo somente leitura.
+- Engenheiros de Teste e Garantia da Qualidade (QA): Acompanhar logs de baterias de testes automatizados e testes de estresse em tempo real com o Live Tail.
+- Administradores de Bancos de Dados (DBAs): Analisar logs transacionais e planos de execução de consultas lentas em bancos de dados relacionais e NoSQL.
+
+
+Como o Munin App Funciona
+
+1. Abertura Protegida e Mapeamento de Memória: O arquivo é aberto em modo somente leitura compartilhada (CreateFileW com GENERIC_READ e FILE_SHARE_READ | FILE_SHARE_WRITE) e mapeado no espaço de endereçamento virtual do processo com CreateFileMappingW e MapViewOfFile.
+2. Indexação Vetorial SIMD por Chunks: O arquivo é particionado em blocos de memória e processado por instruções SIMD AVX2/SSE4.2 que escaneiam quebras de linha em paralelo, gerando um vetor de offsets compacto em tempo recorde.
+3. Exibição Virtual sem Alocação Massiva de Strings: A interface gráfica em Qt 6 utiliza um modelo virtualizado (LogViewModel) que busca em memória apenas as linhas atualmente desenhadas na janela, mantendo o consumo de RAM praticamente estável independentemente do tamanho do arquivo (seja 50 MB ou 50 GB).
+4. Monitoramento Assíncrono sem Polling: Uma thread dedicada em background registra a porta de notificação de diretório do Windows (ReadDirectoryChangesW). Quando novas linhas são gravadas no final do arquivo, o Munin App recalcula o tamanho e atualiza o display instantaneamente.
+5. Integração com o Windows 11: O aplicativo aplica as APIs DWM para suporte nativo a efeitos Mica, barra de título moderna e sincronização perfeita com o Modo Escuro e Claro do sistema operacional.
+
+
+Ferramentas de Análise e Recursos Disponíveis
+
+- Visualizador Virtual de Alta Performance: Rolagem fluida com suporte a zoom dinâmico de fonte e controle de quebra de linhas.
+- Minimap Lateral Interativo: Visão panorâmica visual do documento com densidade de linhas e localização imediata de saltos.
+- Busca Rápida e Expressões Regulares com JIT: Suporte a busca sensível a maiúsculas/minúsculas, palavras inteiras e regex PCRE2 compilado em JIT.
+- Modo de Linhas Filtradas: Modo de isolamento para visualizar exclusivamente linhas correspondentes à pesquisa.
+- Monitoramento Live Tail: Acompanhamento de logs em tempo de execução com controle de auto-scroll.
+- Histograma Time-Slice: Gráfico de volume por fatia temporal para identificarrajadas de tráfego e janelas de falha.
+- Inspetor de Linha e JSON: Visualizador com syntax highlighting para JSON estruturado e árvore de propriedades.
+- Painel de Métricas do Sistema: Monitoramento em tempo real de linhas indexadas, tamanho do arquivo e uso de memória física (RAM) do processo.
+- Bilinguismo Nativo Dinâmico: Alternância instantânea em tempo de execução entre Português (Brasil) e English (United States) sem necessidade de reiniciar.
+
+
+Boas Práticas e Dicas de Performance:
+1. Arquivos Gigantescos em Rede (UNC): O Munin App suporta caminhos locais e caminhos de rede UNC (\\servidor\compartilhamento). Em conexões de rede mais lentas, o tempo de acesso inicial às páginas é limitado pela velocidade da placa de rede física; cópias locais em SSDs NVMe proporcionam taxa máxima de 3+ GB/s.
+2. Uso do Live Tail: Quando o Live Tail estiver ativado, o aplicativo detecta automaticamente novas escritas sem consumir ciclos ociosos de CPU graças à fila de eventos assíncrona do Windows.
+3. Expressões Regulares: Para buscas com expressões regulares complexas em arquivos de muitos gigabytes, use termos específicos de ancoragem sempre que possível para acelerar o motor de casamento JIT.
+
+Suporte e Contato:
+Fernando Nillsson Cidade
+E-mail: linceu_lighthouse@outlook.com
+Repositório: https://github.com/fernandoncidade

@@ -1,0 +1,15 @@
+AVISO DE COPYRIGHT E MARCA REGISTRADA
+======================================
+
+Copyright (C) 2025-2026 Fernando Nillsson Cidade. Todos os direitos reservados.
+
+O software Munin App — Leitor de Logs Massivos e sua documentação original associada, incluindo o código-fonte, a interface gráfica do usuário, os manuais, as especificações técnicas, os relatórios, os ícones, os algoritmos de mapeamento virtual em memória (Memory-Mapped Files), indexação vetorial SIMD (AVX2/SSE4.2), monitoramento em tempo real (Live Tail), analisador temporal (Time-Slice Scanner) e inspetor de dados estruturados JSON, são propriedade intelectual de Fernando Nillsson Cidade. Todas as bibliotecas e componentes de terceiros (incluindo o framework Qt 6 sob GNU LGPLv3) pertencem aos seus respectivos autores e detentores de direitos autorais.
+
+O nome "Munin App" e a expressão "Munin App — Leitor de Logs Massivos" são marcas de referência do projeto criadas por Fernando Nillsson Cidade.
+
+ESCLARECIMENTO DE CÓDIGO ABERTO E DIRETRIZES PARA DESENVOLVEDORES:
+------------------------------------------------------------------
+1. Finalidade desta documentação: A documentação contida no diretório source/assets/ (incluindo ABOUT, CLC, COPYRIGHT, EULA, LICENSES, NOTICES, PRIVACY_POLICY e RELEASE) foi elaborada exclusivamente para atender às exigências de conformidade e comercialização na Microsoft Store.
+2. Liberdade Total para Desenvolvedores: O autor autoriza expressamente desenvolvedores, colaboradores e forks a realizarem quaisquer alterações, exclusões, adições e modificações gerais nesta documentação e no código associado, fornecendo total liberdade para adaptá-los como convier, desde que respeitem as diretrizes, normas e a legislação vigente de seus respectivos países e plataformas de publicação.
+3. Código-Fonte Aberto (Licença GNU AGPLv3): O código-fonte integral está disponibilizado publicamente neste repositório sob a Licença GNU Affero General Public License v3 (AGPLv3). Qualquer pessoa ou entidade tem total liberdade para inspecionar, compilar, gerar seus próprios binários, estender e redistribuir suas compilações próprias de acordo com os termos da GNU AGPLv3.
+4. Restrição sobre o Binário Oficial do Autor: Apenas o binário compilado, empacotado, assinado digitalmente e disponibilizado oficialmente pelo autor (Fernando Nillsson Cidade), notadamente a edição comercial distribuída na Microsoft Store, NÃO possui autorização para comercialização, revenda, redistribuição comercial por terceiros ou engenharia reversa (ressaltando-se que a engenharia reversa é desnecessária, visto que o código-fonte original já está integralmente disponível e aberto no repositório).

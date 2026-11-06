@@ -1,0 +1,60 @@
+# ============================================================================
+# Git Attributes - Munin App (C++20 / Qt 6 / Windows Win32)
+# ============================================================================
+
+# Comportamento padrão: detecção automática de texto com normalização
+* text=auto
+
+# ----------------------------------------------------------------------------
+# Código-fonte C++ e Headers (com suporte a diff semântico de funções C++)
+# ----------------------------------------------------------------------------
+*.cpp text diff=cpp
+*.hpp text diff=cpp
+*.h   text diff=cpp
+*.in  text diff=cpp
+
+# ----------------------------------------------------------------------------
+# Scripts de Automação e Build
+# ----------------------------------------------------------------------------
+*.cmake text
+CMakeLists.txt text
+*.ps1  text eol=crlf
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+
+# ----------------------------------------------------------------------------
+# Instaladores Inno Setup e Recursos Windows
+# ----------------------------------------------------------------------------
+*.iss  text eol=crlf
+*.isl  text eol=crlf
+*.rc   text eol=crlf
+
+# ----------------------------------------------------------------------------
+# Documentação, Configurações e Arquivos Estruturados
+# ----------------------------------------------------------------------------
+*.md   text
+*.txt  text
+*.json text
+*.xml  text
+*.yml  text
+*.yaml text
+*.ts   text
+
+# ----------------------------------------------------------------------------
+# Arquivos Binários (tratados como binários estritos sem merge textual)
+# ----------------------------------------------------------------------------
+*.ico  binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.pdf  binary
+*.qm   binary
+*.exe  binary
+*.dll  binary
+
+# ----------------------------------------------------------------------------
+# Arquivos ignorados ao gerar arquivos compactados (git archive)
+# ----------------------------------------------------------------------------
+.gitignore      export-ignore
+.gitattributes export-ignore
+.github/        export-ignore

@@ -1,0 +1,15 @@
+COPYRIGHT AND TRADEMARK NOTICE
+======================================
+
+Copyright (C) 2025-2026 Fernando Nillsson Cidade. All rights reserved.
+
+The Munin App — Massive Log Viewer software and its original associated documentation, including source code, graphical user interface, manuals, technical specifications, reports, icons, virtual memory mapping algorithms (Memory-Mapped Files), SIMD vector indexing (AVX2/SSE4.2), real-time monitoring (Live Tail), temporal analyzer (Time-Slice Scanner), and structured JSON data inspector, are the intellectual property of Fernando Nillsson Cidade. All third-party libraries and components (including the Qt 6 framework under GNU LGPLv3) belong to their respective authors and copyright holders.
+
+The name "Munin App" and the phrase "Munin App — Massive Log Viewer" are project trademarks created by Fernando Nillsson Cidade.
+
+OPEN SOURCE CLARIFICATION & DEVELOPER GUIDELINES:
+------------------------------------------------------------------
+1. Purpose of this Documentation: The documentation maintained under the source/assets/ directory (including ABOUT, CLC, COPYRIGHT, EULA, LICENSES, NOTICES, PRIVACY_POLICY, and RELEASE) was authored exclusively to fulfill compliance, legal, and operational mandates for the commercial release on the Microsoft Store.
+2. Full Developer Freedom: The author expressly authorizes developers, contributors, and forks to make any changes, deletions, additions, and general modifications to this documentation and source code, granting complete freedom of adaptation provided they respect the guidelines, standards, and legislation of their respective countries and target distribution platforms.
+3. Open Source Code (GNU AGPLv3 License): The entire source code is publicly accessible under the GNU Affero General Public License v3 (AGPLv3). Anyone is free to audit, compile, modify, build custom executables, and embed or distribute derived works in compliance with the GNU AGPLv3.
+4. Restriction on the Author's Official Binaries: The official compiled and digitally packaged binary distributed directly by the author (specifically on the Microsoft Store) may NOT be commercially resold, redistributed by third parties for profit, or reverse-engineered (which is unnecessary anyway, since the author already provides the full, unabridged source code openly in this repository).

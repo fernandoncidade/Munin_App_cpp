@@ -1,0 +1,33 @@
+COMMERCIAL LICENSING CLARIFICATION & ENTERPRISE SUPPORT — Munin App
+Version 2026.11.6.0, November 6, 2026
+
+Author & Developer: Fernando Nillsson Cidade
+Contact Email: linceu_lighthouse@outlook.com
+Official Repository: https://github.com/fernandoncidade/Munin_App_cpp
+
+--------------------------------------------------------------------------------
+
+1. OPEN SOURCE TRANSPARENCY:
+The complete source code of this project is publicly accessible on GitHub under the GNU Affero General Public License v3 (AGPLv3). Any individual or organization has full freedom to inspect, audit, compile, modify, and build derived works from source under the terms and conditions of the GNU AGPLv3.
+
+2. OFFICIAL MICROSOFT STORE EDITION:
+For convenience in enterprise deployment, seamless installation, and guaranteed cryptographic signature integrity, the author distributes an official turnkey package on the Microsoft Store:
+https://apps.microsoft.com/detail/9PP4GVHR5THC
+
+3. TECHNICAL SUPPORT & MAINTENANCE POLICY:
+This project is developed and maintained by the author as an ongoing software engineering and educational initiative in C++20 and Qt 6. Consequently:
+a) Technical support provided by the author (individual maintainer) is delivered EXCLUSIVELY via email (linceu_lighthouse@outlook.com);
+b) Inquiries are answered on a strictly best-effort basis, according to the author's personal availability;
+c) Telephone support, 24/7 on-call availability, and remote desktop access to client environments are NOT provided;
+d) Bug reports, technical feedback, and questions can also be opened via GitHub Issues and Discussions.
+
+4. ENTERPRISE ONBOARDING & CUSTOM COMMERCIAL INQUIRIES:
+For corporate organizations requiring:
+- Custom log governance or compliance assessments across Windows Server / DevOps / SRE environments;
+- Dedicated enterprise support engagements;
+- Commercial exceptions or exemptions from AGPLv3 copyleft terms for closed proprietary distributions;
+
+Please contact the author directly at:
+linceu_lighthouse@outlook.com
+
+Brazil, Paraná, São José dos Pinhais, November 6, 2026.

@@ -1,0 +1,71 @@
+Política de Privacidade do Munin App — Leitor de Logs Massivos
+Última atualização: 6 de novembro de 2026
+Versão: 2026.11.6.0
+
+A sua privacidade e a segurança das suas informações operacionais e corporativas são pilares fundamentais deste projeto. Esta Política de Privacidade explica com transparência e clareza como o Munin App — Leitor de Logs Massivos ("Software" ou "Aplicativo") processa informações e, sobretudo, como todo o controle permanece exclusiva e irrestritamente em suas mãos.
+
+Ao utilizar o Munin App, você concorda com as práticas de privacidade transparentes e rigorosas descritas neste documento.
+
+1. Princípio Fundamental: Arquitetura Local-First e Privacidade Absoluta
+
+O Munin App foi concebido desde a sua primeira linha de código sob o princípio de Privacidade Local e Segurança por Design (Security by Design). Todas as operações de leitura, mapeamento de memória, indexação vetorial SIMD, busca paralela de padrões, acompanhamento em tempo real (Live Tail), geração de histogramas temporais e inspeção de estruturas JSON ocorrem de forma 100% offline, sendo executadas unicamente na memória volátil e no processador do seu computador local. Nenhuma informação é coletada, enviada, transmitida ou sincronizada com servidores remotos, nuvem ou serviços de terceiros.
+
+2. Informações Processadas pelo Software
+
+Para desempenhar suas finalidades de visualização ultrarrápida e diagnóstico de arquivos de log volumosos, o Software acessa e processa as seguintes categorias de dados:
+
+ - Conteúdo de Arquivos de Log Selecionados pelo Usuário: O Software acessa estritamente os arquivos de log que você decide abrir ou arrastar para a aplicação. A leitura é realizada sob demanda utilizando a API Win32 de Arquivos Mapeados em Memória (Memory-Mapped Files — CreateFileMappingW e MapViewOfFile). O Software NÃO realiza cópias integrais do arquivo para buffers intermediários de disco, NÃO envia trechos para a internet e NÃO indexa arquivos fora daqueles expressamente abertos por você.
+ - Notificações do Sistema de Arquivos Local (Live Tail): Para atualizar a exibição em tempo real quando o arquivo de log estiver sendo gravado simultaneamente por outros processos, o Software utiliza a API nativa Win32 ReadDirectoryChangesW, monitorando apenas o descritor do diretório local que contém o arquivo aberto.
+ - Recursos de Hardware para Otimização Local: O Software consulta as capacidades do processador (suporte a instruções vetoriais SIMD AVX2 e SSE4.2) e métricas de consumo de memória física da aplicação via API nativa psapi.lib (GetProcessMemoryInfo) exclusivamente para exibir o indicador de consumo de RAM na barra de status e acelerar a indexação local. Nenhuma métrica é enviada para fora do dispositivo.
+ - Configurações Básicas de Interface do Sistema Operacional: Apenas para fins de renderização gráfica correta, integração com temas do Windows 11 (DWM Mica, Dark Mode e Light Mode), escala de exibição DPI e idioma selecionado pelo usuário.
+
+3. Finalidade do Tratamento e Base Legal (LGPD — Lei nº 13.709/2018 / GDPR)
+
+As informações processadas pelo Munin App são empregadas estritamente para:
+
+ - Fornecer a funcionalidade principal de navegação instantânea em arquivos de log de múltiplos gigabytes com consumo mínimo de memória RAM.
+ - Executar indexação vetorial de quebras de linha em alta velocidade e busca paralela de expressões regulares (Regex JIT).
+ - Monitorar em tempo real a chegada de novas linhas (Live Tail) sem sobrecarregar o sistema com operações contínuas de leitura em disco.
+ - Parsear timestamps em formato ISO-8601 e gerar histogramas de volume temporal (Time-Slice Scanner) e inspeção hierárquica de nós JSON.
+ - Salvar preferências de exibição e idioma selecionadas deliberadamente pelo usuário.
+
+Base Legal: O processamento ocorre com amparo no legítimo interesse do usuário na depuração, auditoria, governança e diagnóstico de seus sistemas e aplicações (Art. 7º, IX da LGPD / Artigo 6(1)(f) do GDPR) e na execução do contrato de licenciamento do software (Art. 7º, V da LGPD / Artigo 6(1)(b) do GDPR).
+
+4. Armazenamento, Segurança e Modo Somente Leitura
+
+ - Armazenamento Local: Todas as preferências do Software (como idioma ativo e configurações visuais) são salvas estritamente no armazenamento persistente local do usuário:
+   %LOCALAPPDATA%\Munin App
+ - Modo Somente Leitura por Padrão Arquitetural: O Munin App opera estritamente em modo de leitura protegida. Os arquivos de log são abertos com sinalizadores de compartilhamento somente leitura (GENERIC_READ com FILE_SHARE_READ | FILE_SHARE_WRITE). O Software JAMAIS altera, edita, sobrescreve, apaga ou trunca os arquivos de log inspecionados.
+ - Segurança Operacional: Como o aplicativo não possui módulos de comunicação em rede nem abre portas de comunicação (sockets TCP/UDP de escuta), a segurança dos seus dados e dos registros corporativos auditados repousa integralmente sob as barreiras de segurança física e lógica do seu próprio computador e da sua rede local.
+ - Compartilhamento com Terceiros: O Software NÃO coleta, NÃO compartilha, NÃO comercializa e NÃO transfere qualquer dado com o desenvolvedor, com a Microsoft ou com terceiros.
+
+5. Seus Direitos e Controle Total (Art. 18 da LGPD / GDPR)
+
+Você detém a soberania absoluta sobre seus dados e arquivos. A qualquer momento, você pode:
+
+ - Fechar os arquivos de log em exibição, liberando imediatamente o mapeamento de memória virtual correspondente;
+ - Limpar o histórico de buscas ou fechar as sessões de monitoramento Live Tail;
+ - Localizar e excluir fisicamente a pasta de configurações locais (%LOCALAPPDATA%\Munin App);
+ - Desinstalar o Software a qualquer momento por meio do Gerenciador de Aplicativos do Windows, o que removerá integralmente todos os binários instalados.
+
+6. Ausência de Telemetria e Zero Analytics
+
+O Munin App opera sob a política estrita de Zero Telemetria. O Software não contém rotinas de analytics, não monitora hábitos de uso, frequência ou tempo de execução, não inclui rastreadores publicitários e não realiza transmissões automatizadas de falhas (crash reports) para a internet. Quaisquer arquivos de diagnóstico interno eventualmente gerados permanecem estritamente locais para conferência pessoal do usuário.
+
+7. Privacidade de Menores de Idade
+
+O Munin App é uma ferramenta técnica de engenharia de software, administração de sistemas e infraestrutura de TI voltada a profissionais e organizações. O aplicativo não foi desenvolvido para crianças menores de 13 anos e não processa intencionalmente informações de menores.
+
+8. Conformidade com as Políticas da Microsoft Store
+
+Esta Política de Privacidade cumpre integralmente os requisitos estabelecidos nas Diretrizes de Desenvolvedor da Microsoft Store (Microsoft Store App Developer Agreement — ADA e Microsoft Store Policies, Seção 10.5 — Personal Information & Privacy).
+
+9. Atualizações desta Política e Canal de Contato
+
+Esta Política de Privacidade poderá ser atualizada periodicamente para refletir melhorias ou novas funcionalidades do Software. Qualquer atualização relevante será indicada pela data de revisão e número de versão no início deste documento e refletida na aba "Privacidade" do diálogo "Sobre" dentro do próprio aplicativo.
+
+Em caso de dúvidas, solicitações ou considerações sobre esta Política de Privacidade ou sobre as práticas de proteção de dados do aplicativo, entre em contato com o desenvolvedor:
+
+Fernando Nillsson Cidade
+E-mail: linceu_lighthouse@outlook.com
+Site / Repositório: https://github.com/fernandoncidade

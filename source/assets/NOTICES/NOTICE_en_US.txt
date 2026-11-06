@@ -1,0 +1,75 @@
+Third-Party Software Dependencies and License Notices — Munin App
+Version 2026.11.6.0, November 6, 2026
+
+This notice applies to the native C++20 and Qt 6 edition of the Munin App — Massive Log Viewer project.
+It documents all third-party libraries, components, and frameworks utilized by the software, their respective licenses, and the rigorous fulfillment of all relevant legal obligations for distribution, including on the Microsoft Store.
+
+Dependencies Identified in the Software Codebase:
+
+1. Qt 6 Framework (The Qt Company)
+Modules utilized by the project:
+- Qt6::Core
+- Qt6::Gui
+- Qt6::Widgets
+
+Purpose in the project:
+- Application core, dynamic internationalization (instant runtime language switching without restarting), responsive widget GUI, virtual data table display model, event handling, and window management.
+
+Licensing Framework:
+- The Qt framework is provided by The Qt Company under commercial licensing and, for open-source distributions, under the terms of the GNU Lesser General Public License (LGPL) version 3.
+- This project is expressly built and configured to operate with Qt libraries dynamically linked as separate and replaceable binaries (.dll) in the standard Windows distribution scenario (Qt6Core.dll, Qt6Gui.dll, and Qt6Widgets.dll).
+
+Fulfilled Obligations for LGPL v3 Distribution:
+- Preservation of Qt copyright notices and official license texts;
+- Dynamic linking, permitting any user or developer to replace the redistributed Qt binaries with compatible versions;
+- Provision of necessary information for relinking/dynamic replacement and clear references to official channels for accessing the framework source code.
+
+Official Qt References:
+- Qt Licensing: https://www.qt.io/licensing
+- The Qt Company LGPL Obligations: https://www.qt.io/licensing/open-source-lgpl-obligations
+- Official Qt Source Code: https://code.qt.io/cgit/qt/qtbase.git/
+
+Specific Legal Notes for Each Qt Module Used:
+- `Qt6::Core`: governed under GNU LGPL v3. The corresponding text is bundled in `source/assets/LICENSES/GNU LESSER GENERAL PUBLIC LICENSE Version 3.txt`.
+- `Qt6::Gui`: governed under GNU LGPL v3. The corresponding text is bundled in `source/assets/LICENSES/GNU LESSER GENERAL PUBLIC LICENSE Version 3.txt`.
+- `Qt6::Widgets`: governed under GNU LGPL v3. The corresponding text is bundled in `source/assets/LICENSES/GNU LESSER GENERAL PUBLIC LICENSE Version 3.txt`.
+- Official GNU LGPL v3 text reference: https://www.gnu.org/licenses/lgpl-3.0.html
+
+
+2. Native Windows APIs and Microsoft Windows SDK
+Usage in the project:
+- Virtual memory mapping of files (Memory-Mapped Files) for instantaneous opening and on-demand zero-copy navigation across massive multi-gigabyte files;
+- Real-time filesystem monitoring for newly appended log entries (Live Tail);
+- Real-time query of physical application memory usage (RAM);
+- Modern Windows desktop theme integration (Windows 11 DWM Mica, Dark Mode, and Light Mode).
+
+Linked Components and Libraries:
+- `kernel32.lib` (CreateFileW, CreateFileMappingW, MapViewOfFile, UnmapViewOfFile, CloseHandle, GetFileSizeEx for virtual page mapping);
+- `kernel32.lib` (ReadDirectoryChangesW for asynchronous Live Tail file monitoring);
+- `dwmapi.lib` (DwmSetWindowAttribute for Dark Mode and modern window framing support in Windows 11);
+- `psapi.lib` (GetProcessMemoryInfo for tracking process RAM usage displayed in the status bar);
+- `user32.lib`, `shell32.lib`.
+
+Licensing Note:
+- These components are integral parts of the Microsoft Windows operating system and Microsoft Windows SDK;
+- They are invoked via standard operating system platform APIs and are not redistributed by this project as separate open-source libraries.
+
+
+3. Hardware SIMD Vector Instructions (AVX2 and SSE4.2)
+Usage in the project:
+- Vectorized acceleration of line delimiter ('\n') scanning and indexing across log buffers at speeds exceeding 3 GB/s;
+- Dynamic runtime CPU instruction detection with safe and portable scalar fallback in standard C++20 for universal compatibility.
+
+Licensing Framework:
+- SIMD intrinsics (<immintrin.h>, <nmmintrin.h>) form part of the standard x86-64 hardware architecture specification defined by microprocessor manufacturers (Intel and AMD) and are provided by supported C++ compiler toolchains.
+
+
+4. Build, Compilation, and Maintenance Tools
+- Compilation and verification utilize Microsoft Visual C++ (MSVC 2022) / MinGW-w64, CMake, Ninja, and Qt translation utilities (`lrelease`);
+- These tools are part of the development and build pipeline and do not constitute runtime dependencies embedded in the final application binary.
+
+
+Final Note Regarding `source/assets/LICENSES`:
+- The license texts bundled in `source/assets/LICENSES/` serve the purpose of legal transparency and third-party dependency attribution;
+- The open-source codebase of the Munin App — Massive Log Viewer software is governed by the GNU Affero General Public License v3 (AGPLv3), whereas the commercial EULA terms apply exclusively to the official, pre-compiled, and digitally signed binary distributed on the Microsoft Store.
+- For questions regarding licenses, attributions, or distribution compliance, contact: linceu_lighthouse@outlook.com.

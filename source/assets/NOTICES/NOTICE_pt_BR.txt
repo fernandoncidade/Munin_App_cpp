@@ -1,0 +1,75 @@
+Aviso de Dependências de Terceiros e Licenças — Munin App
+Versão 2026.11.6.0, 6 de novembro de 2026
+
+Este aviso aplica-se à edição nativa em C++20 e Qt 6 do projeto Munin App — Leitor de Logs Massivos.
+Ele documenta todas as bibliotecas, componentes e frameworks de terceiros utilizados pelo software, suas respectivas licenças e o cumprimento rigoroso de todas as obrigações legais pertinentes para distribuição, inclusive na Microsoft Store.
+
+Dependências Efetivamente Identificadas na Base do Software:
+
+1. Framework Qt 6 (The Qt Company)
+Módulos utilizados pelo projeto:
+- Qt6::Core
+- Qt6::Gui
+- Qt6::Widgets
+
+Finalidade no projeto:
+- Núcleo da aplicação, internacionalização dinâmica (troca instantânea de idiomas em tempo de execução sem reinício), interface gráfica fluida e reativa em widgets, modelo virtual de exibição de dados tabulares, gerenciamento de eventos e manipulação de janelas.
+
+Regime de Licenciamento:
+- O framework Qt é disponibilizado pela The Qt Company sob licenciamento comercial e, nas distribuições open source, sob os termos da GNU Lesser General Public License (LGPL) versão 3.
+- Este projeto foi expressamente construído e configurado para operar com as bibliotecas Qt vinculadas dinamicamente como binários separados e substituíveis (.dll) no cenário padrão de distribuição do Windows (Qt6Core.dll, Qt6Gui.dll e Qt6Widgets.dll).
+
+Obrigações Cumpridas em Distribuições sob LGPL v3:
+- Preservação integral dos avisos de direitos autorais e dos textos oficiais de licença do Qt;
+- Vinculação dinâmica (dynamic linking), permitindo que qualquer usuário ou desenvolvedor substitua os binários redistribuídos do Qt por versões compatíveis;
+- Disponibilização das informações necessárias para relink/substituição dinâmica e indicação dos canais oficiais para acesso ao código-fonte correspondente do framework.
+
+Referências Oficiais do Qt:
+- Licenciamento Qt: https://www.qt.io/licensing
+- Obrigações LGPL da The Qt Company: https://www.qt.io/licensing/open-source-lgpl-obligations
+- Código-fonte oficial do Qt: https://code.qt.io/cgit/qt/qtbase.git/
+
+Observações Legais Específicas por Módulo Qt Utilizado:
+- `Qt6::Core`: tratado sob GNU LGPL v3. O texto correspondente está incluído em `source/assets/LICENSES/GNU LESSER GENERAL PUBLIC LICENSE Version 3.txt`.
+- `Qt6::Gui`: tratado sob GNU LGPL v3. O texto correspondente está incluído em `source/assets/LICENSES/GNU LESSER GENERAL PUBLIC LICENSE Version 3.txt`.
+- `Qt6::Widgets`: tratado sob GNU LGPL v3. O texto correspondente está incluído em `source/assets/LICENSES/GNU LESSER GENERAL PUBLIC LICENSE Version 3.txt`.
+- Referência oficial da GNU LGPL v3: https://www.gnu.org/licenses/lgpl-3.0.html
+
+
+2. APIs Nativas do Windows e Microsoft Windows SDK
+Uso no projeto:
+- Mapeamento virtual de arquivos em memória (Memory-Mapped Files) para abertura instantânea e navegação zero-copy sob demanda em arquivos gigantescos de múltiplos gigabytes;
+- Monitoramento em tempo real do sistema de arquivos para novas entradas de log (Live Tail);
+- Consulta a métricas de consumo de memória física (RAM) em tempo real da aplicação;
+- Integração de temas modernos da área de trabalho do Windows (DWM Mica, Dark Mode e Light Mode).
+
+Componentes e Bibliotecas Vinculadas:
+- `kernel32.lib` (CreateFileW, CreateFileMappingW, MapViewOfFile, UnmapViewOfFile, CloseHandle, GetFileSizeEx para mapeamento virtual de páginas);
+- `kernel32.lib` (ReadDirectoryChangesW para monitoramento assíncrono de arquivos em Live Tail);
+- `dwmapi.lib` (DwmSetWindowAttribute para Dark Mode e suporte a efeitos de janela moderna no Windows 11);
+- `psapi.lib` (GetProcessMemoryInfo para monitoramento do consumo de memória RAM do processo exibido na barra de status);
+- `user32.lib`, `shell32.lib`.
+
+Observação de Licenciamento:
+- Estes componentes fazem parte integrante do sistema operacional Microsoft Windows e do Microsoft Windows SDK;
+- Eles são utilizados por meio das APIs padrão do sistema operacional e não são redistribuídos por este projeto como bibliotecas open source avulsas.
+
+
+3. Instruções Vetoriais SIMD de Hardware (AVX2 e SSE4.2)
+Uso no projeto:
+- Aceleração vetorial de contagem e indexação de quebras de linha ('\n') em buffers de log a velocidades superiores a 3 GB/s;
+- Algoritmos com seleção dinâmica em tempo de execução por detecção de CPU, com fallback escalar seguro e portável em C++20 para compatibilidade universal.
+
+Regime de Licenciamento:
+- Os intrínsecos SIMD (<immintrin.h>, <nmmintrin.h>) integram a especificação de hardware x86-64 dos fabricantes de microprocessadores (Intel e AMD) e as bibliotecas padrão dos compiladores C++ suportados.
+
+
+4. Ferramentas de Build, Compilação e Manutenção
+- A compilação e validação do projeto utilizam o Microsoft Visual C++ (MSVC 2022) / MinGW-w64, CMake, Ninja e as ferramentas de tradução do Qt (`lrelease`);
+- Tais ferramentas integram o pipeline de desenvolvimento e build, não constituindo, por si sós, bibliotecas de runtime incorporadas ao binário final da aplicação.
+
+
+Observação Final sobre Licenças em `source/assets/LICENSES`:
+- Os textos das licenças armazenados no diretório `source/assets/LICENSES/` têm a finalidade estrita de conferir transparência legal e cumprir os requisitos de atribuição de dependências de terceiros;
+- O código-fonte aberto do software Munin App — Leitor de Logs Massivos é regido pela Licença GNU AGPLv3 (GNU Affero General Public License v3), enquanto os termos de EULA comercial aplicam-se unicamente ao pacote binário oficial pré-compilado e assinado digitalmente distribuído na Microsoft Store.
+- Para dúvidas sobre licenças, atribuições ou conformidade de distribuição, entre em contato: linceu_lighthouse@outlook.com.

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: GitHub Discussions
+    url: https://github.com/fernandoncidade/Munin_App_cpp/discussions
+    about: Please ask general questions, share log analysis use cases, or start discussions here.
+  - name: Security Vulnerability Reporting
+    url: https://github.com/fernandoncidade/Munin_App_cpp/security/advisories/new
+    about: Please report security vulnerabilities privately.

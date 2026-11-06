@@ -1,0 +1,207 @@
+NOTAS DE LANÇAMENTO: Versão 2026.11.6.0 — Munin App
+Data de Lançamento: 6 de novembro de 2026
+
+Resumo Geral da Atualização:
+Esta versão marca um importante avanço na maturidade, transparência e facilidade de uso do Munin App. O aplicativo foi aprimorado para oferecer uma experiência de visualização e análise de arquivos de registros ainda mais segura, confiável e aberta para todos os usuários. A atualização traz maior clareza sobre as opções de uso do programa, simplifica os canais de contato e suporte direto com o desenvolvedor, aprimora as orientações sobre conformidade e boas práticas em auditorias de tecnologia, e garante que todas as telas, janelas informativas e manuais de ajuda operem de forma perfeitamente integrada e harmoniosa.
+
+Principais Novidades e Melhorias Desta Versão:
+
+1. Transparência Completa e Modelo de Uso Aberto
+- O projeto passa a contar com diretrizes claras e universais de uso livre para toda a comunidade, assegurando que qualquer pessoa, estudante, profissional ou organização possa estudar, auditar e utilizar a ferramenta com total liberdade e autonomia.
+- Foi estabelecida de maneira transparente a distinção entre a versão de livre distribuição comunitária e a edição oficial pronta para uso disponibilizada na loja do Windows, proporcionando total tranquilidade a todos os usuários sobre seus direitos de uso.
+
+2. Aprimoramento da Janela Informativa e Termos de Uso
+- A janela de informações do aplicativo foi totalmente revisada com textos diretos, amigáveis e objetivos, facilitando o acesso imediato aos canais oficiais de documentação, manuais de instrução e novidades do projeto.
+- As diretrizes de termos de uso e privacidade foram simplificadas para reafirmar, de maneira transparente e sem burocracias, o compromisso de privacidade absoluta do aplicativo: operação 100% desconectada da internet, sem envio de dados ou arquivos e com soberania total do usuário sobre seus registros.
+
+3. Esclarecimento de Suporte e Canais de Contato
+- Orientações simples e diretas sobre como entrar em contato por correio eletrônico institucional para esclarecer dúvidas, enviar sugestões ou reportar melhorias de funcionamento.
+- Definição transparente do modelo de suporte técnico prestado com dedicação pelo desenvolvedor, além de um canal direto e facilitado para empresas e departamentos de tecnologia que necessitem de apoio técnico personalizado ou versões prontas para grandes redes corporativas.
+
+4. Mapeamento de Boas Práticas e Apoio a Auditorias
+- Os guias e manuais de apoio foram enriquecidos com orientações práticas sobre inspeção segura de registros, garantindo que o exame de grandes volumes de informação ocorra sempre de forma não destrutiva, preservando a integridade original dos arquivos.
+- Inclusão de notas claras que orientam os analistas e equipes de tecnologia sobre como utilizar a ferramenta com segurança no dia a dia, em harmonia com as políticas e procedimentos formais de governança de suas próprias organizações.
+
+5. Sincronização Geral e Maior Estabilidade
+- Todas as funcionalidades do sistema — tanto a interface visual com gráficos interativos e mapas de calor quanto a ferramenta rápida de comandos pelo terminal — foram integralmente sincronizadas nesta versão 2026.11.6.0.
+- Maior consistência visual, textos explicativos mais agradáveis e facilidade de leitura aprimorada em todas as caixas de diálogo, painéis laterais e telas auxiliares do aplicativo.
+
+Autor:
+Fernando Nillsson Cidade
+
+================================================================================
+
+NOTAS DE LANÇAMENTO: Versão 2026.10.19.0 — Munin App
+Data de Lançamento: 19 de outubro de 2026
+
+================================================================================
+MUNIN — LEITOR DE LOGS MASSIVOS
+NOVIDADES E MELHORIAS DA VERSÃO 2026.10.19.0
+Data de Lançamento: 19 de outubro de 2026
+================================================================================
+
+1. NOVO UTILITÁRIO DE TERMINAL (LINHA DE COMANDO)
+--------------------------------------------------------------------------------
+A versão 2026.10.19.0 traz como grande destaque o novo utilitário de linha de comando para terminal. Agora você pode analisar seus arquivos de log diretamente pelo Windows Terminal, PowerShell ou Prompt de Comando, sem precisar abrir a janela principal do aplicativo:
+- Exibição de Informações: Descubra instantaneamente o tamanho exato do arquivo, o total de linhas e a velocidade de leitura;
+- Pesquisa Rápida: Encontre termos, palavras-chave ou padrões complexos em segundos, mesmo em arquivos gigantescos, com a opção de salvar o resultado ou exportar em formato estruturado;
+- Acompanhamento ao Vivo: Monitore novos registros gravados em tempo real diretamente na tela do terminal, ideal para acompanhar servidores e processos em execução contínua;
+- Testes de Desempenho: Meça a velocidade de leitura e pesquisa do seu computador com testes práticos de velocidade;
+- Acesso Direto de Qualquer Pasta: O utilitário fica disponível para execução imediata em qualquer local do sistema pelo comando 'munin-app-cli'.
+
+2. ABERTURA INSTANTÂNEA E NAVEGAÇÃO ULTRARRÁPIDA
+--------------------------------------------------------------------------------
+- Arquivos de qualquer tamanho — de poucos megabytes a dezenas de gigabytes — abrem em frações de segundo, sem travamentos e sem congelar o computador;
+- Navegação extremamente suave por milhões de linhas com baixíssimo consumo de memória do computador;
+- Possibilidade de abrir arquivos simplesmente arrastando-os e soltando-os dentro da janela do aplicativo.
+
+3. LOCALIZAÇÃO E FILTRAGEM INTELIGENTE DE REGISTROS
+--------------------------------------------------------------------------------
+- Ferramenta de busca ágil para localizar mensagens de erro, alertas e informações cruciais;
+- Modo de filtro exclusivo que exibe apenas as linhas de interesse, ocultando registros desnecessários com um simples clique;
+- Destaque colorido imediato de todas as ocorrências encontradas para fácil visualização.
+
+4. MONITORAMENTO EM TEMPO REAL NA INTERFACE GRÁFICA
+--------------------------------------------------------------------------------
+- O recurso de acompanhamento contínuo exibe novas informações assim que elas são gravadas no disco por outros programas;
+- Rolagem automática inteligente que acompanha o final do documento, pausando suavemente quando você deseja ler registros anteriores.
+
+5. LINHA DO TEMPO E ANÁLISE DE HORÁRIOS
+--------------------------------------------------------------------------------
+- Gráficos visuais que organizam os registros por hora e minuto, permitindo identificar rapidamente momentos com picos de atividade ou concentração incomum de falhas;
+- Clique direto nas barras do gráfico para navegar imediatamente até o momento exato do evento.
+
+6. LEITURA FACILITADA DE DADOS ESTRUTURADOS (JSON)
+--------------------------------------------------------------------------------
+- Painel lateral inteligente que identifica registros estruturados e os organiza em uma árvore clara e fácil de explorar;
+- Realce de cores para facilitar a identificação de status, níveis de severidade e mensagens;
+- Botão prático para copiar o texto organizado para a área de transferência.
+
+7. BARRA DE ROLAGEM COM MAPA DE CALOR COLORIDO
+--------------------------------------------------------------------------------
+- A barra de rolagem funciona como um mapa visual completo de todo o arquivo:
+  * Marcadores em vermelho indicam erros e falhas graves;
+  * Marcadores em amarelo destacam avisos importantes;
+  * Marcadores em azul sinalizam os resultados da sua busca atual;
+- Clique em qualquer ponto colorido da barra para saltar instantaneamente para aquela ocorrência.
+
+8. VISUAL MODERNO E ADAPTAÇÃO AO WINDOWS 11
+--------------------------------------------------------------------------------
+- O aplicativo detecta automaticamente quando você altera o tema do Windows entre Claro e Escuro, ajustando todas as cores em tempo real com excelente contraste e conforto visual;
+- Janelas de ajuda e manual podem ser mantidas abertas sem bloquear o uso da tela principal, permitindo trabalhar com múltiplos monitores com total liberdade.
+
+9. SUPORTE COMPLETO A PORTUGUÊS E INGLÊS
+--------------------------------------------------------------------------------
+- Troca de idioma rápida e direta nas configurações, atualizando todos os textos, botões e manuais instantaneamente sem precisar reiniciar.
+
+10. PRIVACIDADE E SEGURANÇA TOTAL
+--------------------------------------------------------------------------------
+- Funcionamento 100% desconectado e autônomo no seu computador;
+- Nenhum dado, log, termo pesquisado ou caminho de arquivo é enviado para a internet ou compartilhado com terceiros.
+
+================================================================================
+
+NOTAS DE LANÇAMENTO: Versão 2026.10.17.0 — Munin App
+Data de Lançamento: 17 de outubro de 2026
+
+================================================================================
+MUNIN — LEITOR DE LOGS MASSIVOS
+NOTAS DE LANÇAMENTO OFICIAL — VERSÃO 2026.10.17.0
+Data de Lançamento: 17 de outubro de 2026
+Plataforma: Windows 11 / Windows 10 (x64)
+Ambiente Tecnológico: C++20 / Qt 6.8.3 / Win32 API Nativa
+================================================================================
+
+1. VISÃO GERAL E PROPÓSITO DO SISTEMA
+--------------------------------------------------------------------------------
+O Munin App é uma aplicação de alta performance desenvolvida para engenheiros de software, administradores de sistemas, analistas de segurança (SOC/SIEM) e equipes de infraestrutura e DevOps que necessitam inspecionar, navegar e analisar arquivos de log massivos — desde arquivos rotineiros de dezenas de megabytes até registros gigantescos de múltiplos gigabytes (1 GB, 5 GB, 20 GB ou mais).
+Diferente de editores e visualizadores de texto convencionais que tentam carregar o arquivo inteiro na memória RAM (causando lentidão, congelamentos ou travamentos por esgotamento de memória), o Munin App foi arquitetado desde sua concepção para garantir abertura instantânea, rolagem suave a 60 quadros por segundo, consumo mínimo e previsível de recursos computacionais, busca paralela de alta velocidade e monitoramento em tempo real.
+
+2. ARQUITETURA DE MEMÓRIA: MAPEAMENTO WIN32 (ZERO-COPY)
+--------------------------------------------------------------------------------
+O núcleo do Munin App baseia-se na integração profunda com as primitivas nativas da API Win32 da Microsoft:
+- Abertura e Mapeamento de Arquivos: Utiliza CreateFileW com compartilhamento total (FILE_SHARE_READ | FILE_SHARE_WRITE) e CreateFileMappingW combinado com MapViewOfFile no espaço de endereçamento virtual de 64 bits.
+- Latência Zero na Inicialização: Os arquivos são abertos de forma praticamente instantânea (< 1 ms), sem operações bloqueantes de leitura em disco.
+- Consumo Previsível de RAM: O consumo de memória do aplicativo permanece estável e reduzido a poucos megabytes, independentemente de o arquivo inspecionado possuir 100 megabytes ou dezenas de gigabytes, pois o sistema operacional gerencia as páginas de memória sob demanda via subsistema de memória virtual do Windows.
+- Ampla Compatibilidade de Codificação: Suporte robusto a fluxos de caracteres UTF-8, ANSI e ASCII, preservando caracteres especiais e acentuação gráfica.
+
+3. INDEXAÇÃO VETORIAL ACELERADA POR HARDWARE (SIMD AVX2 / SSE4.2)
+--------------------------------------------------------------------------------
+Para viabilizar paginação e salto aleatório de alta velocidade, o Munin App implementa um subsistema de indexação de quebras de linha otimizado diretamente em nível de hardware:
+- Vetorização AVX2 (256 bits): Processamento de 32 bytes simultâneos por ciclo de instrução vetorial para detecção imediata de caracteres de quebra de linha ('\n').
+- Vetorização SSE4.2 (128 bits): Processamento de 16 bytes simultâneos por ciclo em processadores com conjuntos de instruções legados.
+- Fallback Escalar Portável: Algoritmo escalar de alta eficiência em C++ padrão caso o hardware não forneça suporte a instruções vetoriais.
+- Throughput de Indexação Superior a 3 GB/s: Varredura de linhas em velocidade próxima à largura de banda máxima do barramento de memória e do subsistema NVMe.
+- Indexação Esparsa em Blocos (ChunkIndex): Estruturação em blocos de 64 KB que permite cálculo e salto para qualquer linha em tempo O(1), sem necessidade de manter tabelas de ponteiros de todas as linhas na memória RAM.
+
+4. MONITORAMENTO EM TEMPO REAL ASSÍNCRONO (LIVE TAIL)
+--------------------------------------------------------------------------------
+O Munin App incorpora uma esteira de monitoramento contínuo de logs vivos:
+- Notificações Diretas do Kernel do Windows: Implementado sobre a API ReadDirectoryChangesW em thread dedicada de segundo plano.
+- Zero Polling e 0% de CPU em Inatividade: Eliminação completa de loops de espera ativa ('busy-waiting' ou chamadas frequentes a Sleep), garantindo consumo nulo de processamento enquanto o arquivo não recebe novas gravações.
+- Acompanhamento Fluido: Detecção automática e imediata de novos bytes anexados ao final do arquivo por outros processos ou serviços do sistema operacional.
+- Rolagem Inteligente (Auto-Scroll): Capacidade de fixar a rolagem na extremidade inferior para acompanhar eventos ao vivo, ou permitir a navegação manual em registros anteriores sem que novas linhas interrompam a leitura.
+
+5. MECANISMO DE BUSCA MULTI-CORE PARALELA E FILTRAGEM
+--------------------------------------------------------------------------------
+A ferramenta de busca do Munin App foi projetada para responder instantaneamente mesmo em bases com dezenas de milhões de linhas:
+- Distribuição Multithread em Lote: O arquivo mapeado é particionado em pedaços contíguos e distribuído dinamicamente entre todos os núcleos lógicos da CPU.
+- Expressões Regulares com Compilação JIT: Suporte a padrões regex complexos através do mecanismo de compilação Just-In-Time do Qt (PCRE2 JIT).
+- Modos de Sensibilidade: Alternância rápida entre busca insensível a maiúsculas/minúsculas e sensível a maiúsculas/minúsculas.
+- Modo de Filtragem Exclusiva (Matched-Lines Only): Permite ocultar todas as linhas não correspondentes, exibindo estritamente as entradas que atendem ao padrão da busca.
+- Realce Visual e Navegação Rápida: Destaque visual em tempo real das correspondências com atalhos rápidos de navegação para a ocorrência anterior (F3) e próxima (Shift+F3).
+
+6. HISTOGRAMA TEMPORAL DE ATIVIDADE (TIME-SLICE)
+--------------------------------------------------------------------------------
+Para transformar dados textuais brutos em inteligência cronológica clara:
+- Reconhecimento Automático de Timestamps: Suporte nativo a formatos ISO 8601, RFC 3339, carimbos de data/hora tradicionais de servidores Web, bancos de dados e sistemas operacionais.
+- Agrupamento Flexível de Intervalos: Segmentação configurável de eventos por fatias de segundos, minutos ou horas.
+- Mapeamento Visual de Surtos e Anomalias: Gráfico interativo com identificação por cores de picos de atividade e concentração anômala de eventos de erro (ERROR, CRITICAL, FATAL).
+- Navegação Bidirecional por Clique: O clique sobre qualquer barra do histograma reposiciona imediatamente a visão do leitor para a primeira linha daquele intervalo.
+
+7. VISUALIZAÇÃO VIRTUALIZADA E MINIMAPA DE DENSIDADE (MINIMAP)
+--------------------------------------------------------------------------------
+A interface de visualização do Munin App foi desenvolvida para oferecer extrema fluidez:
+- Renderização Estritamente Virtualizada (LogView): Renderiza exclusivamente as linhas visíveis na viewport atual, eliminando alocações gráficas desnecessárias e garantindo resposta imediata da interface sob qualquer volume de dados.
+- Barra de Rolagem com Minimapa Térmico (MinimapScrollBar): Canal vertical contíguo que desenha um mapa de densidade em miniatura de todo o arquivo.
+- Indicadores Visuais de Severidade: Exibição visual de faixas vermelhas (erros), amarelas (avisos) e azuis/verdes (correspondências de busca), permitindo diagnosticar regiões críticas do arquivo sem necessidade de rolar manualmente página por página.
+
+8. INSPETOR ESTRUTURADO DE LINHAS E LOGS JSON
+--------------------------------------------------------------------------------
+Projetado para ambientes de microserviços, nuvem e contêineres modernos:
+- Parser Estruturado Automático: Detecta payloads JSON embutidos em qualquer linha do log.
+- Árvore Hierárquica Interativa: Organiza chaves, valores, matrizes e objetos aninhados em uma árvore com expansão e recolhimento instantâneos.
+- Colorização Sintática (Syntax Highlighting): Diferenciação clara de strings, valores numéricos, booleanos e nulos para leitura ágil.
+- Ações Práticas de Exportação: Botões de clique único para copiar a linha bruta original, copiar o JSON formatado com indentação legível ou copiar a chave do nó selecionado.
+
+9. GERADOR EMBUTIDO DE LOGS SINTÉTICOS PARA BENCHMARK
+--------------------------------------------------------------------------------
+Para validação de desempenho, provas de conceito e treinamento de equipes:
+- Ferramenta Embutida de Geração: Diálogo integrado acessível pelo menu Ferramentas.
+- Volumes Predefinidos Padronizados: Geração de arquivos sintéticos de 100 MB, 500 MB e 1 GB com registros realistas.
+- Diversidade Estrutural de Dados: Produção de linhas variadas combinando cabeçalhos, severidades, identificadores de thread e objetos JSON formatados com alta fidelidade.
+
+10. INTERNACIONALIZAÇÃO DINÂMICA EM TEMPO DE EXECUÇÃO
+--------------------------------------------------------------------------------
+O Munin App conta com um sistema de localização dinâmico e flexível:
+- Idiomas Oficiais Integrados: Português (Brasil - pt_BR) e Inglês (Estados Unidos - en_US).
+- Comutação Instantânea: A alteração de idioma através do menu de configurações é aplicada imediatamente a todos os componentes da interface — barras de menus, barras de ferramentas, painéis laterais, diálogos de ajuda, rodapés informativos e dicas de ferramenta (tooltips) — sem exigir reinicialização do aplicativo.
+
+11. INTEGRAÇÃO VISUAL COM WINDOWS 11 E ADAPTAÇÃO AUTOMÁTICA DE TEMA
+--------------------------------------------------------------------------------
+O aplicativo foi desenhado para harmonizar-se com os padrões visuais modernos do Windows:
+- Sincronização Automática com o Sistema Operacional: A interface detecta e acompanha dinamicamente a preferência de tema do Windows 11 (Claro ou Escuro).
+- Integração DWM Nativa (Desktop Window Manager): Aplicação de atributos Win32 via DwmSetWindowAttribute para renderização perfeita das barras de título em harmonia com o tema ativo do sistema.
+- Paleta de Alto Contraste Ergonômica: Cores selecionadas para máxima legibilidade e conforto durante longos períodos de auditoria técnica.
+- Arquitetura de Diálogos Modeless Independentes: As janelas auxiliares ('Sobre' e 'Manual de Instruções') operam de maneira não-bloqueante com gerenciamento de Z-Order, permitindo sobreposição livre da janela principal sem restrições de foco.
+
+12. PRIVACIDADE, SEGURANÇA E OPERAÇÃO ESTRITAMENTE LOCAL
+--------------------------------------------------------------------------------
+O Munin App foi concebido com foco intransigente na proteção, sigilo e integridade dos dados:
+- 100% Autônomo e Desconectado: O Munin App opera estritamente em ambiente local e offline.
+- Zero Telemetria e Zero Rastreamento: Nenhum registro de uso, estatística, identificador ou informação comportamental é coletada, armazenada ou enviada para a internet.
+- Sigilo Absoluto dos Dados: O conteúdo dos logs analisados jamais sai da máquina do usuário, tornando o Munin App adequado para ambientes corporativos com rígidas políticas de conformidade (LGPD, GDPR, HIPAA, SOC 2).
+
+================================================================================
+Munin App — Leitor de Logs Massivos está pronto para uso e distribuição oficial.
+================================================================================

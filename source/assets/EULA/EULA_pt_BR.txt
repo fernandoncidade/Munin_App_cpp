@@ -1,0 +1,58 @@
+LICENÇA DE USO DE USUÁRIO FINAL (EULA) — Munin App
+Versão 2026.11.6.0, 6 de novembro de 2026
+
+Copyright (c) 2025-2026 Fernando Nillsson Cidade. Todos os direitos reservados.
+
+AVISO DE ESCLARECIMENTO DE LICENCIAMENTO (DUPLO LICENCIAMENTO):
+Os termos deste Contrato de Licença de Usuário Final (EULA) aplicam-se EXCLUSIVAMENTE ao pacote binário pré-compilado, empacotado e assinado digitalmente distribuído oficialmente pelo autor na Microsoft Store.
+O código-fonte completo deste projeto é disponibilizado publicamente no repositório GitHub sob a Licença GNU Affero General Public License v3 (AGPLv3). Desenvolvedores, contribuidores e a comunidade possuem total liberdade para inspecionar, auditar, compilar, modificar, criar forks e redistribuir suas próprias compilações a partir do código-fonte aberto sob os termos da GNU AGPLv3, sem que este EULA imponha restrições ao código-fonte ou a compilações independentes (conforme detalhado em docs/licensing.md).
+
+Ao instalar, baixar, copiar, acessar ou de qualquer outra forma utilizar o pacote oficial da Microsoft Store do Software Munin App — Leitor de Logs Massivos, você concorda em vincular-se integralmente aos termos e condições desta Licença de Uso de Usuário Final ("Licença" ou "EULA"). Se você não concordar com os termos desta Licença, não instale, não copie nem utilize o executável oficial.
+
+TERMOS E CONDIÇÕES PARA USO, INSTALAÇÃO E EXECUÇÃO:
+
+1. DEFINIÇÕES
+   "Licenciador" refere-se a Fernando Nillsson Cidade, único e exclusivo titular dos direitos autorais e de propriedade intelectual do Software.
+   "Software" refere-se ao programa de computador Munin App — Leitor de Logs Massivos, em código executável binário compilado nativamente para Windows (x64), incluindo sua interface gráfica, algoritmos de indexação SIMD, mecanismos de mapeamento de memória, esquemas de dados, ícones e toda a documentação eletrônica ou impressa associada.
+   "Licenciado", "Usuário" ou "você" refere-se à pessoa física ou jurídica que adquiriu a licença do Software através da Microsoft Store ou canal comercial oficial autorizado.
+
+2. CONCESSÃO DE LICENÇA
+   Sujeito aos termos e condições desta Licença e às políticas da plataforma Microsoft Store, o Licenciador concede ao Licenciado uma licença pessoal, não exclusiva, intransferível e revogável para instalar e executar o Software em dispositivos compatíveis com o sistema operacional Microsoft Windows, unicamente para fins de visualização, navegação, indexação, busca de texto ou expressões regulares, acompanhamento Live Tail e análise de arquivos de log.
+
+3. RESTRIÇÕES DE USO
+   O Licenciado não poderá, sob qualquer pretexto:
+   a) Copiar, redistribuir, alugar, arrendar, emprestar, sublicenciar ou comercializar o Software para terceiros sem autorização prévia por escrito do Licenciador;
+   b) Realizar engenharia reversa, descompilar, desmontar, derivar código-fonte ou contornar medidas de proteção tecnológica do Software, exceto e exclusivamente na medida em que a legislação aplicável expressamente o permita, não obstante esta limitação contratual;
+   c) Remover, ocultar ou adulterar quaisquer avisos de copyright, marcas registradas ou identificadores de propriedade intelectual contidos no Software ou em seus documentos anexos;
+   d) Utilizar o Software para finalidades ilegais, ofensivas, que violem direitos de terceiros ou em desacordo com as leis e regulamentos vigentes.
+
+4. PROPRIEDADE INTELECTUAL
+   O Software é licenciado, e não vendido. O Software é protegido pelas leis de direitos autorais e de proteção à propriedade intelectual de programas de computador do Brasil (Lei nº 9.609/1998 e Lei nº 9.610/1998), tratados internacionais de propriedade intelectual (Convenção de Berna e Acordo TRIPS) e legislações aplicáveis no país de uso. Todos os títulos, direitos de autor, marcas e segredos industriais pertinentes ao Software permanecem como propriedade exclusiva e inalienável do Licenciador.
+
+5. OPERAÇÃO SOMENTE LEITURA E INTEGRIDADE DOS ARQUIVOS DE LOG
+   a) O Software opera estritamente em modo SOMENTE LEITURA (Read-Only) por padrão arquitetural. Os arquivos de log inspecionados são abertos exclusivamente através de chamadas de sistema Win32 configuradas com acesso de leitura compartilhada (GENERIC_READ com FILE_SHARE_READ | FILE_SHARE_WRITE).
+   b) O aplicativo JAMAIS realiza alterações, gravações, substituições, exclusões ou truncamentos nos arquivos de log abertos pelo usuário. O Licenciador não se responsabiliza por eventuais modificações executadas em arquivos de log por processos de terceiros concorrentes na máquina auditada.
+
+6. PRIVACIDADE E SOBERANIA DOS DADOS (LOCAL-FIRST)
+   O Software funciona de forma 100% autônoma e offline. O Software não transmite, não publica, não sincroniza e não expõe nenhum conteúdo de arquivos de log, termos de busca, expressões regulares ou metadados de sistema para redes externas, internet ou provedores em nuvem. Toda a persistência necessária ocorre estritamente no armazenamento local do perfil do usuário (%LOCALAPPDATA%\Munin App).
+
+7. ATUALIZAÇÕES E SUPORTE TÉCNICO
+   O Licenciador pode, a seu exclusivo critério, disponibilizar atualizações, patches de melhoria ou correções para o Software através da Microsoft Store. O suporte técnico é prestado de acordo com a modalidade comercial contratada e o canal de contato oficial fornecido.
+
+8. PRAZO E RESCISÃO
+   Esta Licença permanece em vigor até ser rescindida. O descumprimento de qualquer de suas cláusulas pelo Licenciado importará em rescisão imediata e automática da licença, sem prejuízo da apuração de perdas e danos. Após a rescisão, o Licenciado deverá cessar imediatamente o uso do Software e desinstalá-lo de seus dispositivos.
+
+9. GARANTIA LIMITADA ("NO ESTADO EM QUE SE ENCONTRA")
+   Na máxima extensão permitida pela lei aplicável, o Software é fornecido "NO ESTADO EM QUE SE ENCONTRA" ("AS IS"), "COM TODAS AS SUAS FALHAS" e "CONFORME DISPONÍVEL". O Licenciador não oferece garantias adicionais, expressas ou implícitas, incluindo, mas não se limitando a, garantias de comercialização, adequação a uma finalidade específica, operação ininterrupta ou isenta de erros. Você assume todos os riscos decorrentes do uso e do desempenho do aplicativo.
+
+10. LIMITAÇÃO E EXCLUSÃO DE DANOS E RECURSOS
+    Na medida em que não seja proibido por lei imperativa, caso você tenha qualquer fundamento legal para obter reparação de danos perante o Licenciador, você poderá reaver do Licenciador apenas danos diretos efetivamente comprovados até o montante pago pelo aplicativo na Microsoft Store ou R$ 5,00 (cinco reais brasileiros), prevalecendo o que for maior. Você não tentará, e renuncia irrevogavelmente ao direito de, buscar indenização por lucros cessantes, perdas financeiras indiretas, danos especiais, incidentais, punitivos ou consequenciais decorrentes da utilização ou incapacidade de utilização do Software.
+
+11. RESTRIÇÕES DE EXPORTAÇÃO E LEIS DE TECNOLOGIA
+    O Software pode estar sujeito a controles e legislações sobre exportação e transferência de tecnologia dos Estados Unidos da América e regulamentos internacionais. Você concorda em cumprir todas as leis, regulamentos e sanções de exportação nacionais e internacionais aplicáveis à tecnologia utilizada pelo Software.
+
+12. LEGISLAÇÃO APLICÁVEL E DISPOSIÇÕES GERAIS
+    a) Se você adquiriu o Software nos Estados Unidos ou Canadá, as leis do estado ou província onde você reside regerão a interpretação deste contrato.
+    b) Se você adquiriu o Software no Brasil, as leis da República Federativa do Brasil regerão estes termos.
+    c) Se você adquiriu o Software em qualquer outro país, as leis desse país serão aplicáveis.
+    d) Esta Licença, conjuntamente com a Política de Privacidade e o Esclarecimento de Licenciamento Comercial, constitui o acordo integral entre as partes relativo ao objeto aqui contemplado.

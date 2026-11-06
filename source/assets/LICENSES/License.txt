@@ -1,0 +1,34 @@
+MUNIN — MASSIVE LOG VIEWER
+SOFTWARE LICENSING & COPYRIGHT DECLARATION
+==========================================
+
+Copyright (C) 2025-2026 Fernando Nillsson Cidade. All rights reserved.
+
+The complete open-source codebase of Munin App is distributed publicly under the terms of the GNU Affero General Public License v3 (AGPLv3) on GitHub.
+
+The official compiled, packaged, and digitally signed binary distributed via the Microsoft Store is commercialized under the terms of the End-User License Agreement (EULA) and the Commercial Licensing Clarification (CLC).
+
+THIRD-PARTY OPEN-SOURCE LICENSES & ATTRIBUTION:
+-----------------------------------------------
+In full compliance with open-source licensing standards and transparency obligations, Munin App dynamically links against the following open-source frameworks:
+
+1. Qt 6 Framework (The Qt Company)
+   - Governed under the GNU Lesser General Public License (LGPL) Version 3.
+   - Dynamically linked via separate binary dynamic link libraries (.dll).
+   - Full license text provided in: GNU LESSER GENERAL PUBLIC LICENSE Version 3.txt
+
+Additional standard license texts are provided in this directory for reference and legal transparency regarding third-party development tooling and dependencies:
+- Apache License Version 2.0.txt
+- BSD License Clause-2.txt
+- BSD License Clause-3.txt
+- GNU AFFERO GENERAL PUBLIC LICENSE Version3.txt
+- GNU GENERAL PUBLIC LICENSE Version 3.txt
+- GNU LESSER GENERAL PUBLIC LICENSE Version 2.1.txt
+- ISC LICENSE.txt
+- MIT License.txt
+- PYTHON SOFTWARE FOUNDATION LICENSE.txt
+
+For licensing inquiries, corporate agreements, or technical support:
+Author: Fernando Nillsson Cidade
+Email: linceu_lighthouse@outlook.com
+Repository: https://github.com/fernandoncidade/Munin_App_cpp

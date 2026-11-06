@@ -1,0 +1,71 @@
+Munin App — Massive Log Viewer Privacy Policy
+Last updated: November 6, 2026
+Version: 2026.11.6.0
+
+Your privacy and the security of your operational and corporate data are fundamental pillars of this project. This Privacy Policy clearly and transparently explains how Munin App — Massive Log Viewer ("Software" or "Application") processes information and, above all, how full and unrestricted control remains exclusively in your hands.
+
+By using Munin App, you agree to the transparent and rigorous privacy practices described in this document.
+
+1. Fundamental Principle: Local-First Architecture and Absolute Privacy
+
+Munin App was conceived from its very first line of code under the principles of Local Privacy and Security by Design. All operations—including file reading, virtual memory mapping, SIMD vectorized line indexing, parallel pattern searching, real-time Live Tail monitoring, time-slice volume histogram generation, and JSON structure inspection—occur 100% offline and execute exclusively within the volatile memory and processor of your local computer. No information is collected, uploaded, transmitted, or synchronized with remote servers, cloud infrastructure, or third parties.
+
+2. Information Processed by the Software
+
+To deliver its core purpose of ultra-fast navigation and diagnostics across massive log files, the Software accesses and processes the following data categories:
+
+ - Log File Contents Selected by the User: The Software accesses strictly the log files you choose to open or drag into the application. Reading is performed on-demand via the native Win32 Memory-Mapped Files API (CreateFileMappingW and MapViewOfFile). The Software DOES NOT create full copies of the file into intermediate disk caches, DOES NOT transmit snippets over the internet, and DOES NOT index files outside of those expressly opened by you.
+ - Local Filesystem Notifications (Live Tail): To refresh display lines in real time when a log file is simultaneously written to by background processes, the Software utilizes the native Win32 ReadDirectoryChangesW API, monitoring solely the local directory handle containing the opened file.
+ - Hardware Resources for Local Optimization: The Software checks CPU instruction capabilities (AVX2 and SSE4.2 SIMD support) and application physical memory metrics via the native psapi.lib API (GetProcessMemoryInfo) exclusively to display the RAM usage metric in the status bar and accelerate local line indexing. No performance metrics are transmitted outside the device.
+ - Basic Operating System GUI Settings: Used solely to ensure accurate graphical rendering, Windows 11 theme integration (DWM Mica, Dark Mode, and Light Mode), DPI display scaling, and user-selected interface language.
+
+3. Purpose of Processing and Legal Grounds (GDPR / LGPD Compliance)
+
+The information processed by Munin App is utilized strictly to:
+
+ - Deliver the core capability of instant navigation across multi-gigabyte log files with minimal RAM consumption.
+ - Perform high-speed vectorized line delimiter indexing and multi-core parallel regular expression searching (PCRE2 JIT).
+ - Monitor new incoming lines in real time (Live Tail) without burdening the host system with continuous polling disk reads.
+ - Parse ISO-8601 timestamps to generate time-slice volume histograms and hierarchical JSON property trees.
+ - Persist visual and interface language preferences deliberately selected by the user.
+
+Legal Grounds: Processing takes place under the user's legitimate interest in debugging, auditing, governing, and troubleshooting their systems and applications (GDPR Article 6(1)(f) / Brazilian LGPD Article 7, IX) and in executing the software license agreement (GDPR Article 6(1)(b) / LGPD Article 7, V).
+
+4. Data Storage, Security, and Read-Only Design
+
+ - Local Storage: All application preferences (such as active language and visual configurations) are stored strictly within the user's local persistent profile:
+   %LOCALAPPDATA%\Munin App
+ - Read-Only Architecture by Default Design: Munin App operates strictly in protected read-only mode. Log files are opened with read-only sharing flags (GENERIC_READ with FILE_SHARE_READ | FILE_SHARE_WRITE). The Software NEVER alters, edits, overwrites, deletes, or truncates inspected log files.
+ - Operational Security: Because the application contains no networking listening sockets or outbound telemetry modules, the security of your data and inspected logs relies entirely upon the physical and logical security controls established on your computer and local network.
+ - Third-Party Data Sharing: The Software DOES NOT collect, DOES NOT share, DOES NOT monetize, and DOES NOT transmit any data to the developer, Microsoft, or third parties.
+
+5. Your Rights and Unrestricted Control
+
+You maintain complete sovereignty over your data and files. At any time, you may:
+
+ - Close open log files, immediately unmapping and releasing the associated virtual memory;
+ - Clear search history or terminate active Live Tail monitoring sessions;
+ - Locate and physically delete the local settings directory (%LOCALAPPDATA%\Munin App);
+ - Uninstall the Software at any time using Windows Installed Apps settings, removing all installed binary components.
+
+6. Zero Telemetry and Zero Analytics
+
+Munin App operates on a strict Zero Telemetry policy. The Software contains no analytics routines, does not track usage frequency or session durations, contains no advertisements, and does not automatically transmit crash reports over the internet. Any internal diagnostic files generated remain strictly local for personal user inspection.
+
+7. Children's Privacy
+
+Munin App is a technical software engineering, system administration, and IT infrastructure tool intended for professionals and organizations. The application is not directed at children under the age of 13 and does not knowingly collect or process information from minors.
+
+8. Compliance with Microsoft Store Policies
+
+This Privacy Policy fully complies with the requirements set forth in the Microsoft Store App Developer Agreement (ADA) and Microsoft Store Policies (Section 10.5 — Personal Information & Privacy).
+
+9. Policy Updates and Contact Information
+
+This Privacy Policy may be updated periodically to reflect software enhancements or new capabilities. Any significant updates will be indicated by the revision date and version number at the top of this document and made visible in the "Privacy" tab of the "About" dialog within the application.
+
+If you have questions, feedback, or inquiries regarding this Privacy Policy or data protection practices, please contact the developer:
+
+Fernando Nillsson Cidade
+Email: linceu_lighthouse@outlook.com
+Website / Repository: https://github.com/fernandoncidade
